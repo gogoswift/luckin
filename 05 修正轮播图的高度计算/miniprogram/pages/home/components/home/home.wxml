@@ -1,0 +1,12 @@
+<view class="body">
+	<image mode="widthFix" class="bg" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/homebg.png"></image>
+	<view class="swiper" style="margin-top:{{(titleBarHeight + statusBarHeight)}}rpx;height:{{swiperHeight}}rpx;">
+		<swiper circular="{{true}}" indicator-active-color="#ffffff" bindanimationfinish="onFinish" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}">
+			<block wx:for="{{swiperData}}" wx:key="*this">
+				<swiper-item>
+					<image src="{{item}}" style="width:100%;height:100%"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
