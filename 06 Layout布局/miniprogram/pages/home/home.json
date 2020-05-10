@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "tabbar_home": "./components/home/home",
+    "tabbar_menu": "./components/menu/menu",
+    "tabbar_order": "./components/order/order",
+    "tabbar_cart": "./components/cart/cart",
+    "tabbar_my": "./components/my/my"
+  }
+}

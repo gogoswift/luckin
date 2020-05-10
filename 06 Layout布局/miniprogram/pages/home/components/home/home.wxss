@@ -1,0 +1,27 @@
+/* components/home/home.wxss */
+.body{
+  width: 100%;
+}
+.bg{
+  /*fixed 固定位置 absolute 跟随屏幕滚动 */
+  width: 100%;
+  position: absolute; 
+  top: 0rpx;
+  z-index: -100;
+}
+.swiper{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 30rpx;
+  /* 使内容同样获得圆角 */
+  overflow: hidden;
+  /* transform: translateY(0); */
+}
+.mid_menu{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background-color: white;
+  border-radius: 30rpx;
+  padding: 20rpx;
+}
