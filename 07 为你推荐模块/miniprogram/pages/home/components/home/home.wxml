@@ -1,0 +1,69 @@
+<view class="body">
+	<image mode="widthFix" class="bg" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/homebg.png"></image>
+	<view class="swiper" style="margin-top:{{(titleBarHeight + statusBarHeight)}}rpx;height:{{swiperHeight}}rpx;">
+		<swiper style="width:100%;height:100%" circular="{{true}}" indicator-active-color="#ffffff" bindanimationfinish="onFinish" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}">
+			<block wx:for="{{swiperData}}" wx:key="*this">
+				<swiper-item>
+					<image src="{{item}}" style="width:100%;height:100%"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="mid_menu">
+		<van-row gutter="6">
+			<van-col span="16">
+				<van-image width="100%" height="{{rowHeight}}rpx" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/01.png" />
+			</van-col>
+			<van-col span="8">
+				<van-image width="100%" height="{{(rowHeight - 6)/2}}rpx" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/02.png" />
+				<van-image width="100%" height="{{(rowHeight - 6)/2}}rpx" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/03.png" />
+			</van-col>
+		</van-row>
+		<van-row gutter="6">
+			<van-col span="8">
+				<van-image width="100%" height="{{ rowHeight2 }}rpx" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/04.png" />
+			</van-col>
+			<van-col span="8">
+				<van-image width="100%" height="{{ rowHeight2 }}rpx" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/05.png" />
+			</van-col>
+			<van-col span="8">
+				<van-image width="100%" height="{{ rowHeight2 }}rpx" src="cloud://myluckin-unux5.6d79-myluckin-unux5-1302022060/images/home/06.png" />
+			</van-col>
+		</van-row>
+	</view>
+	<view class="mid_menu">
+		<van-row gutter="6">
+			<van-col span="8"><view class="menu_title">为你推荐</view></van-col>
+			<van-col span="6" offset="8">
+					<view  class="change">换一批</view>
+			</van-col>
+			<van-col span="2">
+				<van-icon color="gray" size="28rpx" name="replay" />
+			</van-col>
+		</van-row>
+		<van-row gutter="10">
+		<block wx:for="{{products}}" wx:key="*this">
+			<van-col span="6">
+				<van-row>
+					<van-image radius="16rpx" width="{{productWidth}}rpx" height="{{productWidth}}rpx" src="{{item.thum}}" />
+				</van-row>
+				<van-row width="{{productWidth}}rpx">
+					<view class="pTitle">{{item.name}}</view>
+				</van-row>
+				<van-row>
+					<van-col span="18">
+						<view class="nPrice">¥{{item.nPrice}}</view>
+						<view class="oPrice">¥{{item.oPrice}}</view>
+					</van-col>
+					<van-col span="4">
+						<image style="width:30rpx;height:30rpx;margin-top:10rpx;" src="./images/btnAdd.png" />
+					</van-col>
+					<van-col span="2">
+					</van-col>
+				</van-row>
+			</van-col>
+			</block>
+		</van-row>
+	</view>
+	<view class="mid_menu"></view>
+</view>
