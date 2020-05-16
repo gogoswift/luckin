@@ -2,13 +2,13 @@
 const cloud = require('wx-server-sdk')
 cloud.init()
 const db = cloud.database()
-const product = db.collection("products")
+const products = db.collection("products")
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const status = "success"
   const msg = ""
-  const data = await product
+  const data = await products
     .aggregate()
     .sample({
       size: 4
