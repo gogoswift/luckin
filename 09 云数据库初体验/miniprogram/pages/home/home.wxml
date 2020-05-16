@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<tabbar_home wx:if="{{active == 'home'}}" />
+<tabbar_menu wx:if="{{active == 'menu'}}" />
+<tabbar_order wx:if="{{active == 'order'}}" />
+<tabbar_cart wx:if="{{active == 'cart'}}" />
+<tabbar_my wx:if="{{active == 'my'}}" />
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+	<van-tabbar-item name="home">
+		<image slot="icon" src="../../images/home.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		<image slot="icon-active" src="../../images/home_select.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		首页
+	</van-tabbar-item>
+	<van-tabbar-item name="menu">
+		<image slot="icon" src="../../images/menu.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		<image slot="icon-active" src="../../images/menu_select.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		菜单
+	</van-tabbar-item>
+	<van-tabbar-item name="order">
+		<image slot="icon" src="../../images/order.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		<image slot="icon-active" src="../../images/order_select.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+
+		订单</van-tabbar-item>
+	<van-tabbar-item name="cart">
+		<image slot="icon" src="../../images/cart.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		<image slot="icon-active" src="../../images/cart_select.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		购物车</van-tabbar-item>
+	<van-tabbar-item name="my">
+		<image slot="icon" src="../../images/my.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		<image slot="icon-active" src="../../images/my_select.png" mode="aspectFit" style="width: 30px; height: 18px;" />
+		我的</van-tabbar-item>
+</van-tabbar>
